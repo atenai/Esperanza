@@ -16,7 +16,7 @@ public:
 
 public:
 	/** Game‚ðRestart‚·‚é **/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "KashiwabaraYuuta")
 	void RestartEsperanzaGame();
 };
 
