@@ -13,6 +13,11 @@ class AEsperanzaGameMode : public AGameModeBase
 
 public:
 	AEsperanzaGameMode();
+
+public:
+	/** Game‚ðRestart‚·‚é **/
+	UFUNCTION(BlueprintCallable)
+	void RestartGame();
 };
 
 

@@ -2,6 +2,7 @@
 
 #include "EsperanzaGameMode.h"
 #include "EsperanzaCharacter.h"
+#include "Kismet/GameplayStatics.h"
 #include "UObject/ConstructorHelpers.h"
 
 AEsperanzaGameMode::AEsperanzaGameMode()
@@ -14,4 +15,14 @@ AEsperanzaGameMode::AEsperanzaGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+}
+
+void AEsperanzaGameMode::RestartGame()
+{
+	// 現在のLevelNameを取得する
+	//FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
+	FString CurrentLevelName = "ThirdPersonMap";//呼び出すマップ名を文字列で定義する
+
+	// CurrentLevelNameと同じ名前のLevelを開きなおす
+	UGameplayStatics::OpenLevel(GetWorld(), FName(*CurrentLevelName));
 }
