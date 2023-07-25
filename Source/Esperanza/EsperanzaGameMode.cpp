@@ -17,7 +17,7 @@ AEsperanzaGameMode::AEsperanzaGameMode()
 	}
 }
 
-void AEsperanzaGameMode::RestartGame()
+void AEsperanzaGameMode::RestartEsperanzaGame()
 {
 	// Œ»İ‚ÌLevelName‚ğæ“¾‚·‚é
 	//FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());

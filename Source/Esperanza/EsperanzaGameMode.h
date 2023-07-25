@@ -17,7 +17,7 @@ public:
 public:
 	/** Game‚ðRestart‚·‚é **/
 	UFUNCTION(BlueprintCallable)
-	void RestartGame();
+	void RestartEsperanzaGame();
 };
 
 
