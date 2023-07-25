@@ -2,7 +2,7 @@
 
 #include "EsperanzaGameMode.h"
 #include "EsperanzaCharacter.h"
-#include "Kismet/GameplayStatics.h"
+#include "Kismet/GameplayStatics.h"//Level関連の関数を使う場合にインクルードする必要がある
 #include "UObject/ConstructorHelpers.h"
 
 AEsperanzaGameMode::AEsperanzaGameMode()
