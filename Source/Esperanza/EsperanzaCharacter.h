@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "InputActionValue.h"
+#include "InputMappingContext.h"//インプット
+#include "InputAction.h"//インプット
+#include "InputActionValue.h"//インプット
 #include "EsperanzaCharacter.generated.h"
 
 
@@ -40,6 +42,12 @@ class AEsperanzaCharacter : public ACharacter
 public:
 	AEsperanzaCharacter();
 	
+	//①このように書くことで、ブループリントエディタのキャラクターの詳細設定にアニメーションをアタッチする項目が出現する
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	UAnimMontage* M_punch;
+
+	//②関数を作成する
+	void Punch();
 
 protected:
 

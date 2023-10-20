@@ -72,7 +72,8 @@ void AEsperanzaCharacter::BeginPlay()
 void AEsperanzaCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// Set up action bindings
-	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent)) {
+	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent)) 
+	{
 		
 		//Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);
@@ -86,6 +87,8 @@ void AEsperanzaCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 
 	}
 
+	//③ボタンが押されたらアニメーションを再生する関数を追加
+	PlayerInputComponent->BindAction("Punch", IE_Pressed, this, &AEsperanzaCharacter::Punch);
 }
 
 void AEsperanzaCharacter::Move(const FInputActionValue& Value)
@@ -124,6 +127,14 @@ void AEsperanzaCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
-
+//②アニメーションを再生する関数を作成する
+void AEsperanzaCharacter::Punch()
+{
+	if (M_punch)
+	{
+		//アニメーションを作成する
+		PlayAnimMontage(M_punch, 1, NAME_None);
+	}
+}
 
 
