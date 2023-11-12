@@ -16,7 +16,7 @@ public:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "KashiwabaraYuuta")
-	void TitleTransition();
+	void GameOverTransition();
 };
 
 
