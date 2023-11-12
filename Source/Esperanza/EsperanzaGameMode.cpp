@@ -21,6 +21,12 @@ AEsperanzaGameMode::AEsperanzaGameMode()
 	{
 		PlayerControllerClass = BP_PlayerControllerClass.Class;
 	}
+
+	UClass* BP_HUDClass = LoadObject<UClass>(nullptr, TEXT("/Game/Esperanza/Blueprints/InGame/HUD_Esperanza.HUD_Esperanza_C"));
+	if (BP_HUDClass != NULL)
+	{
+		HUDClass = BP_HUDClass;
+	}
 }
 
 void AEsperanzaGameMode::GameOverTransition()
