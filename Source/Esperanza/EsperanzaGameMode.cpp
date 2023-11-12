@@ -17,12 +17,12 @@ AEsperanzaGameMode::AEsperanzaGameMode()
 	}
 }
 
-void AEsperanzaGameMode::RestartEsperanzaGame()
+void AEsperanzaGameMode::TitleTransition()
 {
-	// 現在のLevelNameを取得する
-	//FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
-	FString CurrentLevelName = "ThirdPersonMap";//呼び出すマップ名を文字列で定義する
+	//現在のLevelNameを取得する
+	//FString LevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
+	FString LevelName = "Title";//呼び出すマップ名を文字列で定義する
 
-	// CurrentLevelNameと同じ名前のLevelを開きなおす
-	UGameplayStatics::OpenLevel(GetWorld(), FName(*CurrentLevelName));
+	//LevelNameと同じ名前のLevelを開きなおす
+	UGameplayStatics::OpenLevel(GetWorld(), FName(*LevelName));
 }

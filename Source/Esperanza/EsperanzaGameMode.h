@@ -15,9 +15,8 @@ public:
 	AEsperanzaGameMode();
 
 public:
-	/** Game‚ðRestart‚·‚é **/
 	UFUNCTION(BlueprintCallable, Category = "KashiwabaraYuuta")
-	void RestartEsperanzaGame();
+	void TitleTransition();
 };
 
 
