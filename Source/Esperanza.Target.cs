@@ -7,9 +7,14 @@ public class EsperanzaTarget : TargetRules
 {
 	public EsperanzaTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
-		ExtraModuleNames.Add("Esperanza");
-	}
+        Type = TargetType.Game;
+
+        DefaultBuildSettings = BuildSettingsVersion.V5;
+
+        // 最新のInclude Orderを使用
+        IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+
+        // モジュール名を追加
+        ExtraModuleNames.Add("Esperanza");
+    }
 }
