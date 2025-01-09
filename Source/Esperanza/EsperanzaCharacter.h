@@ -43,11 +43,11 @@ public:
 	AEsperanzaCharacter();
 	
 	//①このように書くことで、ブループリントエディタのキャラクターの詳細設定にアニメーションをアタッチする項目が出現する
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-	UAnimMontage* M_punch;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	//UAnimMontage* M_punch;
 
 	//②関数を作成する
-	void Punch();
+	//void Punch();
 
 protected:
 
