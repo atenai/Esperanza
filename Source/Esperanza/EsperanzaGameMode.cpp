@@ -1,5 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 #include "EsperanzaGameMode.h"
 #include "EsperanzaCharacter.h"
 #include "Kismet/GameplayStatics.h"//Level関連の関数を使う場合にインクルードする必要がある
@@ -33,7 +31,7 @@ AEsperanzaGameMode::AEsperanzaGameMode()
 
 void AEsperanzaGameMode::GameOverTransition()
 {
-	
+
 	//FString LevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());//現在のLevelNameを取得する
 	FString LevelName = "Title";//呼び出すマップ名を文字列で定義する
 

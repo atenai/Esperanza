@@ -1,12 +1,9 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 using UnrealBuildTool;
-using System.Collections.Generic;
 
 public class EsperanzaEditorTarget : TargetRules
 {
-	public EsperanzaEditorTarget(TargetInfo Target) : base(Target)
-	{
+    public EsperanzaEditorTarget(TargetInfo Target) : base(Target)
+    {
         Type = TargetType.Editor;
 
         // 最新のビルド設定バージョンを使用
